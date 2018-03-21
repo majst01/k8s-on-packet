@@ -1,0 +1,28 @@
+---
+
+ssh_key_path: $HOME/.ssh/id_rsa
+
+ignore_docker_version: true
+
+nodes:
+  - address: <master ip>
+    user: core
+    role: [controlplane,etcd]
+  - address: <node ip>
+    user: core
+    role: [worker]
+
+
+services:
+  etcd:
+    image: quay.io/coreos/etcd:latest
+  kube-api:
+    image: rancher/k8s:v1.9.5-rancher1-1
+  kube-controller:
+    image: rancher/k8s:v1.9.5-rancher1-1
+  scheduler:
+    image: rancher/k8s:v1.9.5-rancher1-1
+  kubelet:
+    image: rancher/k8s:v1.9.5-rancher1-1
+  kubeproxy:
+    image: rancher/k8s:v1.9.5-rancher1-1
