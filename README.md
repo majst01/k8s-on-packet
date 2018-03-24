@@ -30,13 +30,6 @@ terraform init
 terraform validate
 terraform apply
 ```
-This will take ~5min, after that the ip addresses of the new servers will be in `terraform.tfstate`.
-Put the matching ips into cluster.yml and install k8s with:
-
-
-```bash
-rke up
-```
 
 After this a `kube_config_cluster.yml` configuration is written, copy this to ~/.kube/config.
 The you can use your cluster with:
