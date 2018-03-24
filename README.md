@@ -50,6 +50,7 @@ After this a `kube_config_cluster.yml` configuration is written, copy this to ~/
 The you can use your cluster with:
 
 ```bash
+cp kube_config_cluster.yml ~/.kube/config
 kubectl get nodes
 kubectl get pod --all-namespaces
 ```
