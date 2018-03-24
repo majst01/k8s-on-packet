@@ -1,14 +1,14 @@
 ---
 
-ssh_key_path: $HOME/.ssh/id_rsa
+ssh_key_path: .ssh/id_rsa
 
 ignore_docker_version: true
 
 nodes:
-  - address: <master ip>
+  - address: <fill>
     user: core
     role: [controlplane,etcd]
-  - address: <node ip>
+  - address: <fill>
     user: core
     role: [worker]
 
