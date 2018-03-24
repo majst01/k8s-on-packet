@@ -4,7 +4,22 @@ We try different methods and tools to install a k8s cluster on packet.net.
 
 ## Terraform and Rancher/RKE
 
-1. create a new ssh private key pair
+### install terraform and rancher/rke und kubectl
+
+```bash
+sudo wget https://github.com/rancher/rke/releases/download/v0.1.3-rc4/rke_linux-amd64 -o /usr/local/bin/rke
+
+
+wget https://releases.hashicorp.com/terraform/0.11.5/terraform_0.11.5_linux_amd64.zip \n
+  && unzip terraform_0.11.5_linux_amd64.zip \n
+  && sudo mv terraform /usr/local/bin/terraform
+
+curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \n
+ && chmod +x kubectl \n
+ && sudo mv kubectl /usr/local/bin/kubectl
+```
+
+### create a new ssh private key pair
 
 ```
 mkdir .ssh 
@@ -12,19 +27,19 @@ chmod 700 .ssh
 ssh-keygen -f .ssh/id_rsa
 ```
 
-1. set your Packet API token
+### set your Packet API token
 
 ```
 export PACKET_AUTH_TOKEN=<your api token>
 ```
 
-1. initiallize terraform plugins
+### initiallize terraform plugins
 
 ```bash
 terraform init
 ```
 
-1. Setup a master and a node as most simple scenario as bare metal servers on packet via:
+### Setup a master and a node as most simple scenario as bare metal servers on packet via:
 
 ```bash
 terraform validate
