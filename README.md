@@ -8,6 +8,7 @@ We try different methods and tools to install a k8s cluster on packet.net.
 
 ```bash
 sudo wget https://github.com/rancher/rke/releases/download/v0.1.3-rc4/rke_linux-amd64 -o /usr/local/bin/rke
+  && sudo chmod -x /usr/local/bin/rke
 
 
 wget https://releases.hashicorp.com/terraform/0.11.5/terraform_0.11.5_linux_amd64.zip
