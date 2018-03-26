@@ -23,7 +23,8 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s htt
 ### create a new ssh private key pair
 
 ```
-mkdir .ssh 
+cd terraform-and-rke
+mkdir .ssh
 chmod 700 .ssh
 ssh-keygen -f .ssh/id_rsa
 ```
