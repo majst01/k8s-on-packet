@@ -26,11 +26,11 @@ variable "operating_system" {
 }
 
 variable "kubernetes_version" {
-    description = "The version of kubernetes to install, see https://hub.docker.com/r/rancher/k8s/tags/"
-    default = "v1.9.5-rancher1-1"
+  description = "The version of kubernetes to install, see https://hub.docker.com/r/rancher/k8s/tags/"
+  default     = "v1.9.5-rancher1-1"
 }
 
 variable "etcd_version" {
-    description = "The version of etcd to install, see https://quay.io/repository/coreos/etcd?tab=tags"
-    default = "v3.3"
+  description = "The version of etcd to install, see https://quay.io/repository/coreos/etcd?tab=tags"
+  default     = "v3.3"
 }

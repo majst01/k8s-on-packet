@@ -20,9 +20,9 @@ data "template_file" "cluster" {
   template = "${file("${path.module}/templates/cluster.tpl")}"
 
   vars {
-    controlplane = "${join("\n",data.template_file.controlplane.*.rendered)}"
-    worker       = "${join("\n",data.template_file.worker.*.rendered)}"
-    etcd_version = "${var.etcd_version}"
+    controlplane       = "${join("\n",data.template_file.controlplane.*.rendered)}"
+    worker             = "${join("\n",data.template_file.worker.*.rendered)}"
+    etcd_version       = "${var.etcd_version}"
     kubernetes_version = "${var.kubernetes_version}"
   }
 }
