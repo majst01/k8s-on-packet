@@ -17,7 +17,7 @@ variable "facility" {
 
 variable "plan" {
   description = "The size of the servers to install"
-  default     = "baremetal_0"
+  default     = "t1.small.x86"
 }
 
 variable "operating_system" {
