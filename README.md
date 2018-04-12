@@ -11,8 +11,8 @@ sudo wget https://github.com/rancher/rke/releases/download/v0.1.5/rke_linux-amd6
   && sudo chmod -x /usr/local/bin/rke
 
 
-wget https://releases.hashicorp.com/terraform/0.11.5/terraform_0.11.5_linux_amd64.zip
-  && unzip terraform_0.11.5_linux_amd64.zip
+wget https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip
+  && unzip terraform_0.11.7_linux_amd64.zip
   && sudo mv terraform /usr/local/bin/terraform
 
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
