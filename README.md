@@ -7,7 +7,8 @@ We try different methods and tools to install a k8s cluster on packet.net.
 ### install terraform and rancher/rke und kubectl
 
 ```bash
-sudo wget https://github.com/rancher/rke/releases/download/v0.1.5/rke_linux-amd64 -o /usr/local/bin/rke
+sudo wget https://github.com/rancher/rke/releases/download/v0.1.6-rc2/rke_linux-amd64
+  && sudo mv rke_linux-amd64 /usr/local/bin/rke
   && sudo chmod -x /usr/local/bin/rke
 
 
