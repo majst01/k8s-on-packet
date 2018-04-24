@@ -27,7 +27,7 @@ variable "operating_system" {
 
 variable "kubernetes_version" {
   description = "The version of kubernetes to install, see https://hub.docker.com/r/rancher/k8s/tags/"
-  default     = "v1.9.5-rancher1-1"
+  default     = "v1.10.0-rancher1-2"
 }
 
 variable "etcd_version" {
